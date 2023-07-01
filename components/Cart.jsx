@@ -30,7 +30,7 @@ const Cart = () => {
 
         {cartItems.length < 1 && (
           <div className='empty-cart'>
-            <img src='/emptybag.png' alt='empty/img' className='empty-shopping-bag' />
+            <Image src='/emptybag.png' alt='empty/img' width={300}  height={300} className='empty-shopping-bag' />
             <Link href="/">
               <button type='button' className='btn' onClick={() => setShowCart(false)}>
                 Continue Shopping
@@ -42,7 +42,7 @@ const Cart = () => {
         <div className='product-container'>
           {cartItems.length >= 1 && cartItems.map((item) => (
             <div className='product' key={item._id}>
-              <img src={urlFor(item?.image[0])} alt='product/img'  className='cart-product-image' />
+              <Image src={urlFor(item?.image[0])} alt='product/img' width={500}  height={500}  className='cart-product-image' />
               <div className='item-desc'>
                 <div className='flex top'>
                   <h5>{item.name}</h5>
