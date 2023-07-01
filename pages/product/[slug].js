@@ -20,6 +20,7 @@ const ProductDetails = ({ products, product }) => {
           <div className='small-images-container'>
             {image?.map((item, i) => (
               <img src={urlFor(item)}
+              key={i}
               onClick={() => setIndex(i)}
               className={i === index ? "small-image selected-image" : "small-image"}
               />
